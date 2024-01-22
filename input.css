@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: #454545;
+}
+
+img {
+  display: unset;
+}
+
+.burger {
+  height: 20px;
+  top: 30px;
+  left: 15px;
+  position: absolute;
+  z-index: 999;
+  width: 30px;
+}
+
+.burger-line {
+  display: flex;
+  width: 30px;
+  height: 2px;
+  background: #000;
+}
+
+.top-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mid-line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.bottom-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.burger.active>.top-line {
+  transform: translateY(8px) rotate(45deg);
+  transition: .3s all ease;
+}
+
+.burger.active>.mid-line {
+  opacity: 0;
+  transition: .3s all ease;
+}
+
+.burger.active>.bottom-line {
+  transform: translateY(-10px) rotate(-45deg);
+  transition: .3s all ease;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 56px;
+}
+
+/* Swiper slider */
+
+
+.swiper-slide img {
+  width: 320px;
+  cursor: grab;
+
+}
+
+/* arrows */
+
+.swiper-button-next,
+.swiper-button-prev {
+  transition: 0.5s;
+  will-change: transform;
+}
+
+.swiper-button-prev {
+  margin-left: 295px;
+}
+
+.swiper-button-next {
+  margin-right: 310px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fff;
+  padding: 10px 15px 10px 15px;
+  background: #e41837;
+  border-radius: 50%;
+}
+
